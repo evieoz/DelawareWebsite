@@ -8,6 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,69 +18,104 @@
 
 <body>
 
-<!-- NAVBAR -->
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
 <nav class="navbar navbar-expand-lg ud-navbar sticky-top">
+
   <div class="container">
 
     <a class="navbar-brand" href="index.html">
-      <img src="delaware-wordmark.png"
-           alt="University of Delaware"
-           class="nav-logo">
+
+      <img
+        src="delaware-wordmark.png"
+        alt="University of Delaware"
+        class="nav-logo"
+      >
+
     </a>
 
-    <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNav"
-            aria-controls="mainNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+
       <span class="navbar-toggler-icon"></span>
+
     </button>
+
 
     <div class="collapse navbar-collapse" id="mainNav">
 
       <ul class="navbar-nav ms-auto align-items-lg-center">
 
         <li class="nav-item">
-          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link active" href="index.html">
+            Home
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="about.html">
+            About
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="academics.html">Academics</a>
+          <a class="nav-link" href="academics.html">
+            Academics
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="student-life.html">Student Life</a>
+          <a class="nav-link" href="student-life.html">
+            Student Life
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="admissions.html">Admissions</a>
+          <a class="nav-link" href="admissions.html">
+            Admissions
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="visit.html">Visit</a>
+          <a class="nav-link" href="visit.html">
+            Visit
+          </a>
         </li>
 
         <li class="nav-item ms-lg-3">
-          <a class="nav-cta" href="admissions.html">Apply</a>
+          <a class="nav-cta" href="admissions.html">
+            Apply
+          </a>
         </li>
 
       </ul>
 
     </div>
+
   </div>
+
 </nav>
 
 
-<!-- HERO -->
+
+<!-- =========================================
+     VIDEO HERO
+========================================= -->
+
 <header class="home-hero">
 
-  <!-- HERO VIDEO -->
+  <!-- BACKGROUND VIDEO -->
+
   <video
     id="heroVideo"
     class="hero-media"
@@ -88,33 +124,59 @@
     loop
     playsinline
   >
-    <source src="delaware-campus.mp4" type="video/mp4">
+
+    <source
+      src="delaware-campus.mp4"
+      type="video/mp4"
+    >
+
     Your browser does not support the video tag.
+
   </video>
+
+
+  <!-- BLUE OVERLAY -->
 
   <div class="hero-overlay"></div>
 
+
+  <!-- HERO TEXT -->
+
   <div class="container hero-content">
 
-    <p class="eyebrow light">NEWARK, DELAWARE</p>
+    <p class="eyebrow light">
+      NEWARK, DELAWARE
+    </p>
+
 
     <h1>
       Find your place.<br>
       <span>Build what comes next.</span>
     </h1>
 
+
     <p class="hero-description">
+
       Big opportunities, a connected campus and a college experience
       designed to help you discover where you belong.
+
     </p>
+
 
     <div class="hero-buttons">
 
-      <a href="about.html" class="button button-yellow">
+      <a
+        href="about.html"
+        class="button button-yellow"
+      >
         Discover Delaware
       </a>
 
-      <a href="visit.html" class="button button-outline-light">
+
+      <a
+        href="visit.html"
+        class="button button-outline-light"
+      >
         Plan Your Visit
       </a>
 
@@ -123,194 +185,438 @@
   </div>
 
 
-  <!-- SMALL BLUE HEN LOGO -->
-  <div class="hero-corner">
-    <img src="blue-hen-logo.png" alt="Delaware Blue Hen">
-  </div>
+  <!-- PLAY / PAUSE VIDEO BUTTON -->
 
-
-  <!-- VIDEO PLAY / PAUSE BUTTON -->
   <button
     id="videoToggle"
     class="video-toggle"
     type="button"
     aria-label="Pause background video"
   >
-    <span id="videoToggleIcon">Ⅱ</span>
-    <span id="videoToggleText">PAUSE</span>
+
+    <span
+      id="videoToggleIcon"
+      class="video-toggle-icon"
+    >
+      ❚❚
+    </span>
+
+    <span id="videoToggleText">
+      PAUSE VIDEO
+    </span>
+
   </button>
 
 
-  <div class="scroll-note">
-    <span></span>
-    EXPLORE UD
+  <!-- BLUE HEN -->
+
+  <div class="hero-corner">
+
+    <img
+      src="blue-hen-logo.png"
+      alt="Delaware Blue Hen"
+    >
+
   </div>
 
 </header>
 
 
-<!-- STATS -->
+
+<!-- =========================================
+     INTRO
+========================================= -->
+
+<section class="section intro-section">
+
+  <div class="container">
+
+    <div class="row align-items-center g-5">
+
+
+      <div class="col-lg-5 reveal">
+
+        <p class="eyebrow">
+          THE BLUE HEN EXPERIENCE
+        </p>
+
+
+        <h2 class="display-heading">
+
+          A campus that feels
+          <span>like yours.</span>
+
+        </h2>
+
+
+        <p class="large-copy">
+
+          The University of Delaware brings together academics,
+          research, campus traditions and a strong student community
+          in Newark.
+
+        </p>
+
+
+        <p class="body-copy">
+
+          From your first class to your favorite spot on The Green,
+          UD gives students room to explore new interests, meet new
+          people and build an experience that is their own.
+
+        </p>
+
+
+        <a href="about.html" class="text-link">
+
+          Get to know UD
+          <span>→</span>
+
+        </a>
+
+      </div>
+
+
+
+      <div class="col-lg-7 reveal">
+
+        <div class="editorial-image">
+
+          <img
+            src="main-hall.jpg"
+            alt="University of Delaware campus building"
+          >
+
+
+          <div class="image-label">
+
+            <span>01</span>
+
+            NEWARK, DE
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     STATS
+========================================= -->
+
 <section class="stats-band">
+
   <div class="container">
 
     <div class="row g-0">
 
+
       <div class="col-6 col-lg-3 stat-item reveal">
+
         <strong>150+</strong>
-        <span>Majors to explore</span>
+
+        <span>
+          Majors to explore
+        </span>
+
       </div>
 
+
       <div class="col-6 col-lg-3 stat-item reveal">
+
         <strong>1743</strong>
-        <span>UD founded</span>
+
+        <span>
+          UD founded
+        </span>
+
       </div>
 
+
       <div class="col-6 col-lg-3 stat-item reveal">
+
         <strong>NCAA</strong>
-        <span>Blue Hen athletics</span>
+
+        <span>
+          Blue Hen athletics
+        </span>
+
       </div>
 
+
       <div class="col-6 col-lg-3 stat-item reveal">
+
         <strong>Newark</strong>
-        <span>College-town setting</span>
+
+        <span>
+          College-town setting
+        </span>
+
       </div>
+
 
     </div>
 
   </div>
+
 </section>
 
 
-<!-- ACADEMICS -->
+
+<!-- =========================================
+     ACADEMICS PREVIEW
+========================================= -->
+
 <section class="section academics-preview">
 
   <div class="container">
 
+
     <div class="section-heading reveal">
 
       <div>
-        <p class="eyebrow">ACADEMICS</p>
-        <h2>Turn curiosity into direction.</h2>
+
+        <p class="eyebrow">
+          ACADEMICS
+        </p>
+
+        <h2>
+          Turn curiosity into direction.
+        </h2>
+
       </div>
 
+
       <a href="academics.html" class="text-link">
-        Explore academics <span>→</span>
+
+        Explore academics
+        <span>→</span>
+
       </a>
 
     </div>
+
 
 
     <div class="row g-4">
 
+
+      <!-- HEALTH -->
+
       <div class="col-lg-4 reveal">
+
         <article class="feature-card">
 
           <div class="feature-image">
-            <img src="health-sciences.jpg"
-                 alt="University of Delaware academic building">
+
+            <img
+              src="health-sciences.jpg"
+              alt="University of Delaware academic building"
+            >
+
           </div>
 
+
           <div class="feature-content">
-            <span class="card-number">01</span>
-            <h3>Health Sciences</h3>
+
+            <span class="card-number">
+              01
+            </span>
+
+            <h3>
+              Health Sciences
+            </h3>
+
             <p>
+
               Explore learning connected to health, wellness,
               research and professional preparation.
+
             </p>
+
           </div>
 
         </article>
+
       </div>
 
 
+
+      <!-- BUSINESS -->
+
       <div class="col-lg-4 reveal">
+
         <article class="feature-card">
 
           <div class="feature-image">
-            <img src="classroom.jpg"
-                 alt="Students in a University of Delaware classroom">
+
+            <img
+              src="classroom.jpg"
+              alt="Students in a University of Delaware classroom"
+            >
+
           </div>
 
+
           <div class="feature-content">
-            <span class="card-number">02</span>
-            <h3>Business</h3>
+
+            <span class="card-number">
+              02
+            </span>
+
+            <h3>
+              Business
+            </h3>
+
             <p>
-              Build skills in areas including marketing, finance,
-              accounting and entrepreneurship.
+
+              Build skills in areas including marketing,
+              finance, accounting and entrepreneurship.
+
             </p>
+
           </div>
 
         </article>
+
       </div>
 
 
+
+      <!-- ARTS -->
+
       <div class="col-lg-4 reveal">
+
         <article class="feature-card">
 
           <div class="feature-image">
-            <img src="art-gallery.jpg"
-                 alt="Art gallery at the University of Delaware">
+
+            <img
+              src="art-gallery.jpg"
+              alt="Art gallery at the University of Delaware"
+            >
+
           </div>
 
+
           <div class="feature-content">
-            <span class="card-number">03</span>
-            <h3>Arts & Sciences</h3>
+
+            <span class="card-number">
+              03
+            </span>
+
+            <h3>
+              Arts & Sciences
+            </h3>
+
             <p>
-              Discover paths across the arts, humanities,
-              sciences and social sciences.
+
+              Discover paths across the arts,
+              humanities, sciences and social sciences.
+
             </p>
+
           </div>
 
         </article>
+
       </div>
+
 
     </div>
 
   </div>
+
 </section>
 
 
-<!-- STUDENT LIFE -->
+
+<!-- =========================================
+     STUDENT LIFE FEATURE
+========================================= -->
+
 <section class="split-feature">
 
+
   <div class="split-image reveal">
-    <img src="student-group.jpg"
-         alt="University of Delaware students together on campus">
+
+    <img
+      src="student-group.jpg"
+      alt="University of Delaware students together on campus"
+    >
+
   </div>
+
+
 
   <div class="split-content reveal">
 
-    <p class="eyebrow light">LIFE AT DELAWARE</p>
+    <p class="eyebrow light">
+      LIFE AT DELAWARE
+    </p>
+
 
     <h2>
+
       More than where<br>
       you go to class.
+
     </h2>
 
+
     <p>
-      College is also the people you meet, the traditions you join
-      and the memories you make between classes.
+
+      College is also the people you meet,
+      the traditions you join and the memories
+      you make between classes.
+
     </p>
+
 
     <div class="mini-links">
 
+
       <a href="student-life.html#housing">
+
         <span>01</span>
+
         Campus Living
+
         <b>→</b>
+
       </a>
+
 
       <a href="student-life.html#community">
+
         <span>02</span>
+
         Clubs & Community
+
         <b>→</b>
+
       </a>
 
+
       <a href="student-life.html#athletics">
+
         <span>03</span>
+
         Blue Hen Spirit
+
         <b>→</b>
+
       </a>
+
 
     </div>
 
@@ -319,154 +625,311 @@
 </section>
 
 
-<!-- PHOTO STORY -->
+
+<!-- =========================================
+     PHOTO STORY
+========================================= -->
+
 <section class="section photo-story">
 
   <div class="container">
 
+
     <div class="section-heading reveal">
+
       <div>
-        <p class="eyebrow">THE UD EXPERIENCE</p>
-        <h2>Picture yourself here.</h2>
+
+        <p class="eyebrow">
+          THE UD EXPERIENCE
+        </p>
+
+        <h2>
+          Picture yourself here.
+        </h2>
+
       </div>
+
     </div>
+
 
 
     <div class="photo-grid">
 
+
       <div class="photo-large reveal">
-        <img src="campus-aerial-wide.jpg"
-             alt="Aerial view of University of Delaware">
+
+        <img
+          src="campus-aerial-wide.jpg"
+          alt="Aerial view of University of Delaware"
+        >
+
+
         <div class="photo-caption">
-          <span>THE CAMPUS</span>
+
+          <span>
+            THE CAMPUS
+          </span>
+
           A place to explore
+
         </div>
+
       </div>
 
 
+
       <div class="photo-small reveal">
-        <img src="stadium-night.jpg"
-             alt="University of Delaware stadium at night">
+
+        <img
+          src="stadium-night.jpg"
+          alt="University of Delaware stadium at night"
+        >
+
+
         <div class="photo-caption">
-          <span>BLUE HEN SPIRIT</span>
+
+          <span>
+            BLUE HEN SPIRIT
+          </span>
+
           Game nights
+
         </div>
+
       </div>
+
 
 
       <div class="photo-small reveal">
-        <img src="puppy-event.jpg"
-             alt="Students at a campus event">
+
+        <img
+          src="puppy-event.jpg"
+          alt="Students at a campus event"
+        >
+
+
         <div class="photo-caption">
-          <span>COMMUNITY</span>
+
+          <span>
+            COMMUNITY
+          </span>
+
           Find your people
+
         </div>
+
       </div>
+
 
     </div>
 
   </div>
+
 </section>
 
 
-<!-- VISIT FEATURE -->
+
+<!-- =========================================
+     VISIT FEATURE
+========================================= -->
+
 <section class="visit-feature">
 
-  <img src="memorial-hall.jpg"
-       alt="Memorial Hall at the University of Delaware">
+
+  <img
+    src="memorial-hall.jpg"
+    alt="Memorial Hall at the University of Delaware"
+  >
+
 
   <div class="visit-overlay"></div>
 
+
   <div class="container visit-content reveal">
 
-    <p class="eyebrow light">COME SEE IT FOR YOURSELF</p>
+    <p class="eyebrow light">
+      COME SEE IT FOR YOURSELF
+    </p>
+
 
     <h2>
+
       Your Delaware story<br>
       could start here.
+
     </h2>
 
-    <a href="visit.html" class="button button-yellow">
+
+    <a
+      href="visit.html"
+      class="button button-yellow"
+    >
+
       Plan a Campus Visit
+
     </a>
 
   </div>
 
+
 </section>
 
 
-<!-- FINAL CTA -->
+
+<!-- =========================================
+     FINAL CTA
+========================================= -->
+
 <section class="final-cta">
+
   <div class="container">
 
+
     <div class="cta-logo reveal">
-      <img src="ud-logo.png" alt="UD">
+
+      <img
+        src="ud-logo.png"
+        alt="UD"
+      >
+
     </div>
+
+
 
     <div class="cta-copy reveal">
 
-      <p class="eyebrow light">READY FOR WHAT'S NEXT?</p>
+      <p class="eyebrow light">
+        READY FOR WHAT'S NEXT?
+      </p>
 
-      <h2>Become a Blue Hen.</h2>
+
+      <h2>
+        Become a Blue Hen.
+      </h2>
+
 
       <p>
-        Explore your options, visit campus and take the next
-        step toward the University of Delaware.
+
+        Explore your options, visit campus
+        and take the next step toward the
+        University of Delaware.
+
       </p>
 
     </div>
 
+
+
     <div class="cta-actions reveal">
-      <a href="admissions.html" class="button button-yellow">
+
+      <a
+        href="admissions.html"
+        class="button button-yellow"
+      >
+
         Explore Admissions
+
       </a>
 
-      <a href="visit.html" class="button button-outline-light">
+
+      <a
+        href="visit.html"
+        class="button button-outline-light"
+      >
+
         Visit Campus
+
       </a>
+
     </div>
 
+
   </div>
+
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
 <footer class="site-footer">
 
   <div class="container">
 
+
     <div class="footer-main">
 
-      <div>
-        <img src="ud-circle-logo.png"
-             alt="University of Delaware"
-             class="footer-logo">
 
-        <p>Newark, Delaware</p>
+      <div>
+
+        <img
+          src="ud-circle-logo.png"
+          alt="University of Delaware"
+          class="footer-logo"
+        >
+
+        <p>
+          Newark, Delaware
+        </p>
+
       </div>
+
 
 
       <div class="footer-links">
-        <a href="about.html">About</a>
-        <a href="academics.html">Academics</a>
-        <a href="student-life.html">Student Life</a>
-        <a href="admissions.html">Admissions</a>
-        <a href="visit.html">Visit</a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="academics.html">
+          Academics
+        </a>
+
+        <a href="student-life.html">
+          Student Life
+        </a>
+
+        <a href="admissions.html">
+          Admissions
+        </a>
+
+        <a href="visit.html">
+          Visit
+        </a>
+
       </div>
 
+
     </div>
+
 
 
     <div class="footer-bottom">
-      <span>University of Delaware Recruitment Website</span>
+
+      <span>
+        University of Delaware Recruitment Website
+      </span>
+
+      <span>
+        WDPP Year 3
+      </span>
+
     </div>
+
 
   </div>
 
 </footer>
 
 
+
+<!-- BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- CUSTOM JS -->
 <script src="script.js"></script>
 
 </body>

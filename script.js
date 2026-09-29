@@ -1,81 +1,109 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* =========================================
-   HERO VIDEO PLAY / PAUSE
-========================================= */
 
-const heroVideo =
-  document.getElementById("heroVideo");
-
-const videoToggle =
-  document.getElementById("videoToggle");
-
-const videoToggleIcon =
-  document.getElementById("videoToggleIcon");
-
-const videoToggleText =
-  document.getElementById("videoToggleText");
-
-
-if (heroVideo && videoToggle) {
-
-  videoToggle.addEventListener("click", function () {
-
-    if (heroVideo.paused) {
-
-      heroVideo.play();
-
-      videoToggleIcon.textContent = "Ⅱ";
-      videoToggleText.textContent = "PAUSE";
-
-      videoToggle.setAttribute(
-        "aria-label",
-        "Pause background video"
-      );
-
-    } else {
-
-      heroVideo.pause();
-
-      videoToggleIcon.textContent = "▶";
-      videoToggleText.textContent = "PLAY";
-
-      videoToggle.setAttribute(
-        "aria-label",
-        "Play background video"
-      );
-
-    }
-
-  });
-
-}
   /* =========================================
-     MOBILE NAV
+     HERO VIDEO PLAY / PAUSE
   ========================================= */
 
-  const navLinks = document.querySelectorAll("#mainNav .nav-link");
-  const navCollapse = document.getElementById("mainNav");
+  const heroVideo =
+    document.getElementById("heroVideo");
 
-  navLinks.forEach(function (link) {
+  const videoToggle =
+    document.getElementById("videoToggle");
 
-    link.addEventListener("click", function () {
+  const videoToggleIcon =
+    document.getElementById("videoToggleIcon");
 
-      if (
-        window.innerWidth < 992 &&
-        navCollapse &&
-        navCollapse.classList.contains("show")
-      ) {
+  const videoToggleText =
+    document.getElementById("videoToggleText");
 
-        const bootstrapCollapse =
-          bootstrap.Collapse.getOrCreateInstance(navCollapse);
 
-        bootstrapCollapse.hide();
+  if (
+    heroVideo &&
+    videoToggle &&
+    videoToggleIcon &&
+    videoToggleText
+  ) {
+
+    videoToggle.addEventListener("click", function () {
+
+      if (heroVideo.paused) {
+
+        heroVideo.play();
+
+        videoToggleIcon.textContent = "❚❚";
+
+        videoToggleText.textContent =
+          "PAUSE VIDEO";
+
+        videoToggle.setAttribute(
+          "aria-label",
+          "Pause background video"
+        );
+
+      } else {
+
+        heroVideo.pause();
+
+        videoToggleIcon.textContent = "▶";
+
+        videoToggleText.textContent =
+          "PLAY VIDEO";
+
+        videoToggle.setAttribute(
+          "aria-label",
+          "Play background video"
+        );
+
       }
 
     });
 
+  }
+
+
+
+  /* =========================================
+     MOBILE NAV
+  ========================================= */
+
+  const navLinks =
+    document.querySelectorAll(
+      "#mainNav .nav-link"
+    );
+
+  const navCollapse =
+    document.getElementById(
+      "mainNav"
+    );
+
+
+  navLinks.forEach(function (link) {
+
+    link.addEventListener(
+      "click",
+      function () {
+
+        if (
+          window.innerWidth < 992 &&
+          navCollapse &&
+          navCollapse.classList.contains("show")
+        ) {
+
+          const bootstrapCollapse =
+            bootstrap.Collapse.getOrCreateInstance(
+              navCollapse
+            );
+
+          bootstrapCollapse.hide();
+
+        }
+
+      }
+    );
+
   });
+
 
 
   /* =========================================
@@ -83,52 +111,80 @@ if (heroVideo && videoToggle) {
   ========================================= */
 
   const filterButtons =
-    document.querySelectorAll(".filter-button");
+    document.querySelectorAll(
+      ".filter-button"
+    );
 
   const programCards =
-    document.querySelectorAll(".program-card");
+    document.querySelectorAll(
+      ".program-card"
+    );
 
 
   filterButtons.forEach(function (button) {
 
-    button.addEventListener("click", function () {
+    button.addEventListener(
+      "click",
+      function () {
 
-      const selectedFilter = button.dataset.filter;
-
-
-      /* CHANGE ACTIVE BUTTON */
-
-      filterButtons.forEach(function (btn) {
-        btn.classList.remove("active");
-      });
-
-      button.classList.add("active");
+        const selectedFilter =
+          button.dataset.filter;
 
 
-      /* FILTER CARDS */
+        /* REMOVE ACTIVE STATE */
 
-      programCards.forEach(function (card) {
+        filterButtons.forEach(
+          function (btn) {
 
-        const category = card.dataset.category;
+            btn.classList.remove(
+              "active"
+            );
 
-        if (
-          selectedFilter === "all" ||
-          category === selectedFilter
-        ) {
+          }
+        );
 
-          card.classList.remove("program-hidden");
 
-        } else {
+        /* ACTIVE BUTTON */
 
-          card.classList.add("program-hidden");
+        button.classList.add(
+          "active"
+        );
 
-        }
 
-      });
+        /* FILTER PROGRAMS */
 
-    });
+        programCards.forEach(
+          function (card) {
+
+            const category =
+              card.dataset.category;
+
+
+            if (
+              selectedFilter === "all" ||
+              category === selectedFilter
+            ) {
+
+              card.classList.remove(
+                "program-hidden"
+              );
+
+            } else {
+
+              card.classList.add(
+                "program-hidden"
+              );
+
+            }
+
+          }
+        );
+
+      }
+    );
 
   });
+
 
 
   /* =========================================
@@ -136,29 +192,42 @@ if (heroVideo && videoToggle) {
   ========================================= */
 
   const revealElements =
-    document.querySelectorAll(".reveal");
+    document.querySelectorAll(
+      ".reveal"
+    );
 
 
-  if ("IntersectionObserver" in window) {
+  if (
+    "IntersectionObserver" in window
+  ) {
 
     const observer =
       new IntersectionObserver(
 
-        function (entries, observer) {
+        function (
+          entries,
+          observer
+        ) {
 
-          entries.forEach(function (entry) {
+          entries.forEach(
+            function (entry) {
 
-            if (entry.isIntersecting) {
+              if (
+                entry.isIntersecting
+              ) {
 
-              entry.target.classList.add(
-                "reveal-visible"
-              );
+                entry.target.classList.add(
+                  "reveal-visible"
+                );
 
-              observer.unobserve(entry.target);
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
 
             }
-
-          });
+          );
 
         },
 
@@ -169,29 +238,40 @@ if (heroVideo && videoToggle) {
       );
 
 
-    revealElements.forEach(function (element) {
-      observer.observe(element);
-    });
+    revealElements.forEach(
+      function (element) {
+
+        observer.observe(
+          element
+        );
+
+      }
+    );
 
   } else {
 
-    revealElements.forEach(function (element) {
+    revealElements.forEach(
+      function (element) {
 
-      element.classList.add(
-        "reveal-visible"
-      );
+        element.classList.add(
+          "reveal-visible"
+        );
 
-    });
+      }
+    );
 
   }
 
 
+
   /* =========================================
-     NAV SHADOW ON SCROLL
+     NAVBAR SHADOW
   ========================================= */
 
   const navbar =
-    document.querySelector(".ud-navbar");
+    document.querySelector(
+      ".ud-navbar"
+    );
 
 
   function updateNavbar() {
@@ -201,14 +281,17 @@ if (heroVideo && videoToggle) {
     }
 
 
-    if (window.scrollY > 20) {
+    if (
+      window.scrollY > 20
+    ) {
 
       navbar.style.boxShadow =
         "0 8px 30px rgba(0, 35, 70, 0.08)";
 
     } else {
 
-      navbar.style.boxShadow = "none";
+      navbar.style.boxShadow =
+        "none";
 
     }
 
@@ -219,6 +302,7 @@ if (heroVideo && videoToggle) {
     "scroll",
     updateNavbar
   );
+
 
   updateNavbar();
 
